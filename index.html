@@ -16,8 +16,24 @@
                 background-color: aquamarine;
             }
 
+            main {
+                margin-top: 20px;
+                margin-bottom: 80px;
+            }
+
             footer {
+                padding-top: 10px;
+                padding-bottom: 10px;
                 background-color: gray;
+            }
+
+            #contactInfo {
+                text-decoration: underline;
+                margin-bottom: 4px;
+            }
+
+            #copyright {
+                margin-top: 16px;
             }
         </style>
     </head>
@@ -31,7 +47,15 @@
             <p id="output"></p>
         </main>
         <footer>
-            <p>footer</p>
+            <p id="contactInfo">contact information</p>
+            <p href="mailto:test@example.com">test@example.com</p>
+            <p href="tel:+155555555555">(555) 555-5555</p>
+            <address>
+                1234 Elm Street<br>
+                Springfeild, IL 12345<br>
+                USA
+            </address>
+            <p id="copyright">&copy; 2025 Test. All rights reserved.</p>
         </footer>
     </body>
     <script>
