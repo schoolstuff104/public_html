@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>aura.io</title>
+        <title>aura.io - home</title>
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <style>
             * {
@@ -79,20 +79,34 @@
                 margin-right: 6px;
                 margin-top: 9px;
             }
+
+            #welcome {
+                display: flex;
+                justify-content: center;
+            }
+
+            #ip {
+                margin-left: 6px;
+                text-decoration: bold;
+            }
         </style>
     </head>
     <body>
         <header>
             <div id="branding">
-                <img id="logo" src="images/logo.png" alt="Description of image">
+                <img id="logo" src="images/logo.png" alt="logo">
                 <h1>aura</h1>
                 <p>.io</p>
             </div>
         </header>
         <main>
-            <p>blablabla</p>
+            <div id="welcome">
+                <p>welcome</p>
+                <p id="ip"></p>
+            </div>
             <button id="button" class="button-link">click me</button>
             <p id="output"></p>
+            <img id="monkey" src="images/monkey.png" alt="monkey">
             <a id="sourceCodeBtn" href="https://github.com/schoolstuff104/public_html/blob/main/index.html" target="_blank" rel="noopener noreferrer" class="button-link">
                 source code
             </a>
@@ -117,6 +131,17 @@
 
         button.addEventListener("click", function() {
             output.textContent = var1;
+        });
+
+        
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip').innerHTML = '<strong>' + data.ip + '</strong>';
+        })
+            .catch(error => {
+                document.getElementById('ip').textContent = 'unable to fetch ip';
+                console.error(error);
         });
     </script>
 </html>
