@@ -102,6 +102,30 @@
             #output {
                 margin-top: 4px;
             }
+
+            #menu {
+                margin-bottom: 6px;
+            }
+
+            #menu a {
+                color: darkblue;
+            }
+
+            #menu a:hover {
+                color: blue;
+            }
+
+            #footerInfo {
+                margin-top: 6px;
+            }
+
+            #footerInfo a {
+                color: black;
+            }
+
+            #footerInfo a:hover {
+                color: #222;
+            }
         </style>
     </head>
     <body>
@@ -110,6 +134,11 @@
                 <img id="logo" src="images/logo.png" alt="logo">
                 <h1>aura</h1>
                 <p>.io</p>
+            </div>
+            <div id="menu">
+                <a href="#">home</a>
+                <a href="#">shop</a>
+                <a href="#">contact</a>
             </div>
         </header>
         <main>
@@ -132,13 +161,17 @@
         </main>
         <footer>
             <p id="contactInfo">contact information</p>
-            <p href="mailto:hello@aura.io">hello@aura.io</p>
-            <p href="tel:+155555555555">(555) 555-5555</p>
+            <p>hello@aura.io</p>
+            <p>(555) 555-5555</p>
             <address>
                 1234 Elm Street<br>
                 Springfeild, IL 12345<br>
                 USA
             </address>
+            <div id="footerInfo">
+                <a href="#">privacy policy</a><br>
+                <a href="#">terms of service</a>
+            </div>
             <p id="copyright">&copy; 2025 Aura. All rights reserved.</p>
         </footer>
     </body>
